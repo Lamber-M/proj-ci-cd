@@ -1,0 +1,8 @@
+name: Cantina-push
+on: [push]
+jobs:
+  cantina-menu:
+    runs-on: ubuntu-18.04 # Required for linkchecker
+    steps:
+    - run: mvn compile # Installation des outils requis
+    - run: make test
